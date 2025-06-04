@@ -1,6 +1,4 @@
 $(document).ready(function () {
-  // Update the text and style of the h2 element
-    $("h2").text("Featured Works (Updated by jQuery)").css("color", "#cc5500");
   // Create a toggle button with custom CSS and a click event handler
     const toggleBtn = $("<button>Toggle Gallery</button>")
       .css({
