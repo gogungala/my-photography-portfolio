@@ -15,40 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 1000);
     });
   });
-
-  // Task 1: Random Number Generation and Conditionals
-  const generatePhotoBtn = document.getElementById("generatePhotoBtn");
-  const randomNumberDisplay = document.getElementById("randomNumber");
-  const evenOddDisplay = document.getElementById("evenOdd");
-  const comparisonDisplay = document.getElementById("comparison");
-  generatePhotoBtn.addEventListener("click", () => {
-    const randomNum = Math.floor(Math.random() * 10) + 1;
-    randomNumberDisplay.textContent = `Photo ID: ${randomNum}`;
-    evenOddDisplay.textContent = randomNum % 2 === 0 ? "This photo ID is even." : "This photo ID is odd.";
-    comparisonDisplay.textContent = randomNum > 5 ? "This photo ID is greater than 5." : "This photo ID is less than or equal to 5.";
-  });
-
-  // Task 2: Comparators and Logic Operators
-  const price1Input = document.getElementById("price1");
-  const price2Input = document.getElementById("price2");
-  const comparePricesBtn = document.getElementById("comparePricesBtn");
-  const priceResult = document.getElementById("priceResult");
-  comparePricesBtn.addEventListener("click", () => {
-    const price1 = parseFloat(price1Input.value);
-    const price2 = parseFloat(price2Input.value);
-    if (isNaN(price1) || isNaN(price2)) {
-      priceResult.textContent = "Please enter valid prices.";
-      return;
-    }
-    if (price1 > price2) {
-      priceResult.textContent = `Price 1 ($${price1.toFixed(2)}) is more expensive than Price 2 ($${price2.toFixed(2)}).`;
-    } else if (price2 > price1) {
-      priceResult.textContent = `Price 2 ($${price2.toFixed(2)}) is more expensive than Price 1 ($${price1.toFixed(2)}).`;
-    } else {
-      priceResult.textContent = "Both prices are equal.";
-    }
-  });
-
+    
   // Task 3: Working with Arrays
   let categories = JSON.parse(localStorage.getItem("categories")) || ["Landscape", "Portrait", "Street", "Macro"];
   const categoryList = document.getElementById("categoryList");
